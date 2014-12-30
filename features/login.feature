@@ -6,7 +6,7 @@ I want to be able to log in
 
 Background: employees allready have user name and password
 
-When I am on PSIFAS login page
+Given I am on the PSIFAS login page
 
 Scenario: user enter valid user name and password
 
