@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
 
+  resources :patients
+
+  resources :users
+
   get 'main_page/index'
 
   get 'login/index'
