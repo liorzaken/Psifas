@@ -26,7 +26,7 @@
               .form-group
                 = link_to 'My Blog', controller: 'main_page', :id => "button"
                 %button.btn.btn-primary.btn-lg.btn-block Sign In
-           .modal-footer
+          .modal-footer
             .col-md-12
     / script references
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"}

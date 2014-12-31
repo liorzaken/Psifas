@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  get 'add_patients/add_patient'
+  
+
+  resources :patients
+
+  resources :users
 
   get 'main_page/index'
 
-  get 'login/index'
   root 'login#index'
   
+  #add route to call "login" method from view
+  resources :login
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

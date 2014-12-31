@@ -1,6 +1,10 @@
-!!! 5
+!!!
 %html{:lang => "en"}
   %head
+    %title Psifas
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
     %meta{:charset => "utf-8"}
       %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
         %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
@@ -22,35 +26,30 @@
       #sidebar-wrapper
         %ul.sidebar-nav
           %li.sidebar-brand
-            %a{:href => "#"}
-              Start Bootstrap
+            Welcome 
           %li
-            %a{:href => "#"} Dashboard
+            = link_to 'Add Patient', new_patient_path
           %li
-            %a{:href => "#"} Shortcuts
+            = link_to 'Show All Patients', controller: 'patient'
           %li
-            %a{:href => "#"} Overview
+            %a{:href => "#"} Add report
           %li
-            %a{:href => "#"} Events
+            %a{:href => "#"} Future reports
           %li
-            %a{:href => "#"} About
+            %a{:href => "#"} Reports history
           %li
-            %a{:href => "#"} Services
-          %li
-            %a{:href => "#"} Contact
+            %a{:href => "#"} Managment
+          
       / /#sidebar-wrapper
       / Page Content
       #page-content-wrapper
         .container-fluid
           .row
             .col-lg-12
-              %h1 Simple Sidebar
-              = yield
-              %p
-                Make sure to keep all page content within the
-                = succeed "." do
-                  %code #page-content-wrapper
-              %a#menu-toggle.btn.btn-default{:href => "#menu-toggle"} Toggle Menu
+              .row
+                %a#menu-toggle.btn.btn-default{:href => "#menu-toggle"} Toggle Menu
+              .row
+                = yield
       / /#page-content-wrapper
     / /#wrapper
     / jQuery
