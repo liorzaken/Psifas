@@ -19,4 +19,4 @@
     = f.label :address
     = f.text_field :address
   .actions
-    = f.submit 'Save', :id => 'save'
+    = f.submit 'Save', :html => { :id => 'save' } 

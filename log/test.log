@@ -1,0 +1,737 @@
+  [1m[36m (58.5ms)[0m  [1mCREATE TABLE "patients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "patientId" varchar, "birthDate" varchar, "fullName" varchar, "address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (10.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userName" varchar, "password" varchar, "fullName" varchar, "manager" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (10.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (11.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (12.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141230151636')[0m
+  [1m[35m (9.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141230150448')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-06 06:16:34 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (5.1ms)
+Completed 200 OK in 160ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:00:27 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (10.6ms)
+Completed 200 OK in 314ms (Views: 254.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (23.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:11:58 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (3.8ms)
+Completed 200 OK in 126ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (26.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:22:40 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (5.7ms)
+Completed 200 OK in 118ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:23:15 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (4.1ms)
+Completed 200 OK in 118ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:23:15 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:23:15 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:25:07 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (3.8ms)
+Completed 200 OK in 110ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:25:07 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:25:07 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:26:32 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (4.3ms)
+Completed 200 OK in 117ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:26:32 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:26:32 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:27:33 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (4.8ms)
+Completed 200 OK in 208ms (Views: 167.0ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:27:33 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:27:33 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:28:15 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (3.8ms)
+Completed 200 OK in 90ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:28:15 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:28:15 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:40:24 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 124ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:40:24 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (3.4ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:40:24 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:40:24 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:41:36 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 130ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:41:37 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:41:37 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (5.9ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:41:37 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:41:37 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:47:05 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 132ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:47:05 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:47:05 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.5ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:47:05 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:47:05 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:48:09 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 130ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:48:09 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 07:48:10 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.5ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 07:48:10 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 07:48:10 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:11:35 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 131ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:11:35 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:11:35 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.6ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:11:35 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:11:35 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:13:15 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 164ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:13:16 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (107.6ms)
+  Rendered patients/new.html.haml within layouts/application (127.7ms)
+Completed 200 OK in 207ms (Views: 135.7ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:13:16 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (6.7ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:13:16 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:13:16 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:15:43 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 374ms (Views: 226.7ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:15:44 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (204.6ms)
+  Rendered patients/new.html.haml within layouts/application (224.7ms)
+Completed 200 OK in 383ms (Views: 237.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:15:44 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (3.1ms)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:15:44 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:15:44 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:17:24 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 157ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:17:24 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (55.8ms)
+  Rendered patients/new.html.haml within layouts/application (69.3ms)
+Completed 200 OK in 166ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:17:24 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.9ms)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:17:24 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:17:24 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:19:48 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 166ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:19:49 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (7.6ms)
+  Rendered patients/new.html.haml within layouts/application (21.6ms)
+Completed 500 Internal Server Error in 131ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:19:49 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (2.2ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:19:49 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:19:49 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:20:22 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 133ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:20:22 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (50.3ms)
+  Rendered patients/new.html.haml within layouts/application (56.8ms)
+Completed 200 OK in 154ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:20:22 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.6ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:20:23 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:20:23 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:22:33 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 134ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:22:33 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (50.8ms)
+  Rendered patients/new.html.haml within layouts/application (58.4ms)
+Completed 200 OK in 153ms (Views: 62.6ms | ActiveRecord: 3.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:22:33 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (7.8ms)
+Completed 200 OK in 38ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:22:33 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:22:33 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:23:56 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 152ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:23:56 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (47.2ms)
+  Rendered patients/new.html.haml within layouts/application (55.1ms)
+Completed 200 OK in 143ms (Views: 63.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:23:56 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.6ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:23:56 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:23:56 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:25:14 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 166ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 09:25:15 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (71.9ms)
+  Rendered patients/new.html.haml within layouts/application (87.7ms)
+Completed 200 OK in 180ms (Views: 95.2ms | ActiveRecord: 0.8ms)
+Started POST "/patients" for 127.0.0.1 at 2015-01-11 09:25:15 -0400
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "patient"=>{"patientId"=>"036892628", "birthDate"=>"19/03/1985", "fullName"=>"Moti Monsonego", "address"=>"Jerusalem"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "patients" ("patientId", "birthDate", "fullName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["patientId", "036892628"], ["birthDate", "19/03/1985"], ["fullName", "Moti Monsonego"], ["address", "Jerusalem"], ["created_at", "2015-01-11 13:25:15.370382"], ["updated_at", "2015-01-11 13:25:15.370382"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/patients/1
+Completed 302 Found in 87ms (ActiveRecord: 0.5ms)
+Started GET "/patients/1" for 127.0.0.1 at 2015-01-11 09:25:15 -0400
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT  "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered patients/show.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 09:25:15 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (9.4ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 09:25:15 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 09:25:15 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:02:55 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 135ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 10:02:55 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (50.1ms)
+  Rendered patients/new.html.haml within layouts/application (55.8ms)
+Completed 200 OK in 147ms (Views: 63.2ms | ActiveRecord: 0.3ms)
+Started POST "/patients" for 127.0.0.1 at 2015-01-11 10:02:55 -0400
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "patient"=>{"patientId"=>"036892628", "birthDate"=>"19/03/1985", "fullName"=>"Moti Monsonego", "address"=>"Jerusalem"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "patients" ("patientId", "birthDate", "fullName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["patientId", "036892628"], ["birthDate", "19/03/1985"], ["fullName", "Moti Monsonego"], ["address", "Jerusalem"], ["created_at", "2015-01-11 14:02:55.712867"], ["updated_at", "2015-01-11 14:02:55.712867"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/patients/1
+Completed 302 Found in 84ms (ActiveRecord: 0.5ms)
+Started GET "/patients/1" for 127.0.0.1 at 2015-01-11 10:02:55 -0400
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT  "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered patients/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 75ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 10:02:55 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.8ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 10:02:55 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:02:55 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:05:14 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 126ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 10:05:14 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (49.0ms)
+  Rendered patients/new.html.haml within layouts/application (57.2ms)
+Completed 200 OK in 156ms (Views: 61.9ms | ActiveRecord: 0.4ms)
+Started POST "/patients" for 127.0.0.1 at 2015-01-11 10:05:15 -0400
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "patient"=>{"patientId"=>"036892628", "birthDate"=>"19/03/1985", "fullName"=>"Moti Monsonego", "address"=>"Jerusalem"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "patients" ("patientId", "birthDate", "fullName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["patientId", "036892628"], ["birthDate", "19/03/1985"], ["fullName", "Moti Monsonego"], ["address", "Jerusalem"], ["created_at", "2015-01-11 14:05:15.170436"], ["updated_at", "2015-01-11 14:05:15.170436"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/patients/1
+Completed 302 Found in 89ms (ActiveRecord: 0.5ms)
+Started GET "/patients/1" for 127.0.0.1 at 2015-01-11 10:05:15 -0400
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT  "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered patients/show.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 10:05:15 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (3.7ms)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 10:05:15 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:05:15 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:05:44 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 114ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 10:05:44 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (50.5ms)
+  Rendered patients/new.html.haml within layouts/application (57.7ms)
+Completed 200 OK in 154ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+Started POST "/patients" for 127.0.0.1 at 2015-01-11 10:05:44 -0400
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "patient"=>{"patientId"=>"036892628", "birthDate"=>"19/03/1985", "fullName"=>"Moti Monsonego", "address"=>"Jerusalem"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "patients" ("patientId", "birthDate", "fullName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["patientId", "036892628"], ["birthDate", "19/03/1985"], ["fullName", "Moti Monsonego"], ["address", "Jerusalem"], ["created_at", "2015-01-11 14:05:44.815035"], ["updated_at", "2015-01-11 14:05:44.815035"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/patients/1
+Completed 302 Found in 84ms (ActiveRecord: 0.5ms)
+Started GET "/patients/1" for 127.0.0.1 at 2015-01-11 10:05:44 -0400
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT  "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered patients/show.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 51ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 10:05:44 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.9ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 10:05:45 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:05:45 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:06:55 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 169ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+Started GET "/patients/new" for 127.0.0.1 at 2015-01-11 10:06:55 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.haml (51.3ms)
+  Rendered patients/new.html.haml within layouts/application (57.5ms)
+Completed 200 OK in 157ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+Started POST "/patients" for 127.0.0.1 at 2015-01-11 10:06:56 -0400
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "patient"=>{"patientId"=>"036892628", "birthDate"=>"19/03/1985", "fullName"=>"Moti Monsonego", "address"=>"Jerusalem"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "patients" ("patientId", "birthDate", "fullName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["patientId", "036892628"], ["birthDate", "19/03/1985"], ["fullName", "Moti Monsonego"], ["address", "Jerusalem"], ["created_at", "2015-01-11 14:06:56.023224"], ["updated_at", "2015-01-11 14:06:56.023224"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/patients/1
+Completed 302 Found in 92ms (ActiveRecord: 0.6ms)
+Started GET "/patients/1" for 127.0.0.1 at 2015-01-11 10:06:56 -0400
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPatient Load (0.2ms)[0m  SELECT  "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered patients/show.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 54ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2015-01-11 10:06:56 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.haml within layouts/login (1.7ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+Started POST "/login/login" for 127.0.0.1 at 2015-01-11 10:06:56 -0400
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "button"=>""}
+Redirected to http://www.example.com/main_page/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/main_page/index" for 127.0.0.1 at 2015-01-11 10:06:56 -0400
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

@@ -10,8 +10,8 @@ Given I am on the PSIFAS login page
 
 Scenario: user enter valid user name and password
 
-When I enter valid user name
-When I enter valid password
-And I press "login_button"
+When I fill in "UserName" with "admin"
+When I fill in "Password" with "Admin1234"
+And I press "login"
 
-Then I should redirect to home page
+Then I should be on the main page
