@@ -30,13 +30,13 @@
           %li
             = link_to 'Add Patient', new_patient_path
           %li
-            = link_to 'Show All Patients', controller: 'patient'
+            = link_to 'Show All Patients', controller: 'patients'
           %li
-            %a{:href => "#"} Add report
+            = link_to 'Add Report', new_report_path
           %li
             %a{:href => "#"} Future reports
           %li
-            %a{:href => "#"} Reports history
+            = link_to 'Reports History', reports_path 
           %li
             %a{:href => "#"} Managment
           

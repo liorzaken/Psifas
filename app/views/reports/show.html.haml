@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @report.date
+%p
+  %b Patientid:
+  = @report.patientId
+%p
+  %b Reporter:
+  = @report.reporter
+%p
+  %b Background:
+  = @report.background
+%p
+  %b Description:
+  = @report.description
+%p
+  %b Conclusion:
+  = @report.conclusion
+
+= link_to 'Edit', edit_report_path(@report)
+\|
+= link_to 'Back', reports_path

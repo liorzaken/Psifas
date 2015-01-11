@@ -21,6 +21,12 @@ module NavigationHelpers
       '/patients/new'
     when /^the show patient\s?page$/
       '/patients/1'
+    when /^the add report\s?page$/
+      '/reports/new'
+    when /^the show report\s?page$/
+      '/reports/1'
+    when /^the report history\s?page$/
+      '/reports'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
