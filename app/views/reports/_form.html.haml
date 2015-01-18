@@ -8,13 +8,22 @@
 
   .field
     = f.label :date
-    = f.datetime_select :date
+    = f.date_select :date, :disabled => true
+  
+  - patientsHash = Hash.new
+  - @patients.each do |p|
+    - patientsHash[p.fullName+' '+p.patientId]=p.patientId
   .field
     = f.label :patientId
-    = f.text_field :patientId
+    = f.select(:patientId, options_for_select(patientsHash))
+  
+  
+  - usersHash = Hash.new
+  - @users.each do |u|
+    - usersHash[u.fullName]=u.userName
   .field
     = f.label :reporter
-    = f.text_field :reporter
+    = f.select(:reporter, options_for_select(usersHash))
   .field
     = f.label :background
     = f.text_area :background
@@ -24,5 +33,9 @@
   .field
     = f.label :conclusion
     = f.text_area :conclusion
+    
+    .field
+    = f.label :'next report should be on:'
+    = f.date_select :date, :order => [:day, :month, :year], :selected => Time.now + 6.month
   .actions
     = f.submit 'Save', :id => 'save'

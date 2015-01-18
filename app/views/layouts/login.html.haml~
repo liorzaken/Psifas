@@ -13,4 +13,51 @@
               <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
             %link{:href => "css/styles.css", :rel => "stylesheet"}
   %body
-    = yield
+   
+
+.jumbotron.text-center
+  %h1 ברוכים הבאים ל-SpeechTherapy
+.panel
+  .panel-body
+    .row
+      .col-md-offset-4.col-md-4
+        .panel.panel-default
+          .panel-heading.text-center משתמש קיים
+          .panel-body
+            .col-md-offset-1.col-md-10
+              = form_tag :controller => 'login', :action => 'login' do
+                         
+                .form-group{:class => ("has-warning" if (@isIdEmpty && @backFromPost)) || ("has-error" if ( !@doesIdExists && !@isIdEmpty && @backFromPost))} 
+                  .input-group
+                    %label{:class => "sr-only", :for => :id} Therapit License
+                    = text_field_tag :id, @idNumber, class: 'form-control' , placeholder: 'מספר רישיון...', autofocus: 'true'
+                    .input-group-addon
+                      <i class="glyphicon glyphicon-briefcase"></i>
+        
+                  .alert.alert-warning{:role => "alert", :class => ("hide" unless (@isIdEmpty && @backFromPost))} חובה להזין מספר רישיון
+
+                  .alert.alert-danger{:role => "alert", :class => ("hide" unless ( !@doesIdExists && !@isIdEmpty && @backFromPost))} הרשיון לא קיים במערכת
+             
+                .form-group{:class => ("has-warning" if (@isPassEmpty && @backFromPost)) || ("has-error" if ( !@isPassCorrect && !@isPassEmpty && @backFromPost))}
+                  .input-group
+                    %label{:class => "sr-only", :for => "email"} Email address
+                    = password_field_tag :password, nil, class: 'form-control', placeholder: 'סיסמה...'
+                    .input-group-addon 
+                      <i class="glyphicon glyphicon-asterisk"></i>
+
+                  .alert.alert-warning{:role => "alert", :class => ("hide" unless (@isPassEmpty && @backFromPost))} חובה להזין סיסמה
+
+                  .alert.alert-danger{:role => "alert", :class => ("hide" unless ( @doesIdExists && !@isPassCorrect && !@isPassEmpty && @backFromPost))} הסיסמה שגויה!
+
+                  .alert.alert-success{:role => "alert", :class => ("hide" unless (@isPassCorrect))}
+                    %p התחברת למערכת בהצלחה!
+                    -unless @user.nil?
+                      =@user.mail + " " + @user.firstName + " " + @user.lastName
+
+                = button_tag "התחבר למערכת", class: 'btn btn-primary btn-lg btn-block'
+            
+          .panel-footer.text-center= link_to 'משתמש חדש?', '#register'
+        
+    / script references
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"}
+    %script{:src => "js/bootstrap.min.js"}
