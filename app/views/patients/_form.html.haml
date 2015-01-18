@@ -11,7 +11,7 @@
     = f.text_field :patientId
   .field
     = f.label :birthDate
-    = f.text_field :birthDate
+    = f.date_select :birthDate, :order => [:day, :month, :year], :start_year => 1910
   .field
     = f.label :fullName
     = f.text_field :fullName

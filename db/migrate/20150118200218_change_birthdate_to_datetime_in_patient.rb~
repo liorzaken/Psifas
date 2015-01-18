@@ -1,0 +1,4 @@
+class ChangeBirthdateToDatetimeInPatient < ActiveRecord::Migration
+  def change
+  end
+end

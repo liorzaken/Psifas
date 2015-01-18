@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118174307) do
+ActiveRecord::Schema.define(version: 20150118200218) do
 
   create_table "patients", force: :cascade do |t|
     t.string   "patientId"
-    t.string   "birthDate"
+    t.datetime "birthDate"
     t.string   "fullName"
     t.string   "address"
     t.datetime "created_at", null: false
