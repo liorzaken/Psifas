@@ -9,7 +9,7 @@ class CreateReports < ActiveRecord::Migration
       t.text :conclusion
       t.datetime :nextDate
 
-      t.timestamps null: false
+      
     end
   end
 end
