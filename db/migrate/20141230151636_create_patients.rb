@@ -5,8 +5,7 @@ class CreatePatients < ActiveRecord::Migration
       t.datetime :birthDate
       t.string :fullName
       t.string :address
-
-      t.timestamps null: false
+      
     end
   end
 end
