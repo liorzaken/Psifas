@@ -8,7 +8,7 @@
 
   .field
     = f.label :date
-    = f.date_select :date, :selected => Time.now, :order => [:day, :month, :year], :discard_day => true, :discard_month => true, :discard_year => true 
+    = f.date_select :date, :order => [:day, :month, :year]
   
   - patientsHash = Hash.new
   - @patients.each do |p|

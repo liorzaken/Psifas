@@ -8,7 +8,7 @@
 
   .field
     = f.label :date
-    = f.date_select :date, :disabled => true
+    = f.date_select :date, :order => [:day, :month, :year]
   
   - patientsHash = Hash.new
   - @patients.each do |p|
@@ -34,8 +34,8 @@
     = f.label :conclusion
     = f.text_area :conclusion
     
-    .field
+  .field
     = f.label :'next report should be on:'
-    = f.date_select :date, :order => [:day, :month, :year], :selected => Time.now + 6.month
+    = f.date_select :nextDate, :order => [:day, :month, :year], :selected => Time.now + 6.month
   .actions
     = f.submit 'Save', :id => 'save'

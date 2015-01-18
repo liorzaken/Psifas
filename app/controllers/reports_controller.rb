@@ -21,6 +21,8 @@ class ReportsController < ApplicationController
 
   # GET /reports/1/edit
   def edit
+    @patients = Patient.all
+    @users = User.all
   end
 
   # POST /reports
