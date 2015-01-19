@@ -1,17 +1,15 @@
 %h1 Listing users
-
-%table
-  %thead
+.CSSTableGenerator
+  %table
     %tr
-      %th Username
-      %th Password
-      %th Fullname
-      %th Manager
-      %th
-      %th
-      %th
+      %td Username
+      %td Password
+      %td Fullname
+      %td Manager
+      %td
+      %td
+      %td
       
-  %tbody
     - @users.each do |user|
       %tr
         %td= user.userName
@@ -24,4 +22,5 @@
 
 %br
 
-= link_to 'New User', new_user_path
+= link_to '', new_user_path
+%button.save{ :onclick => "window.location.href='/users/new'"} New User

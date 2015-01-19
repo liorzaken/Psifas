@@ -1,0 +1,7 @@
+%link{:type => "text/css", :rel => "stylesheet", :href => "/css/new_patient.css"}
+%h1 New patient
+
+= render 'form'
+
+
+%button.save{:style => "margin-left: 400px" , :onclick => "window.location.href='/patients'"} Back

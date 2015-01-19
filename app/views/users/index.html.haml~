@@ -1,0 +1,25 @@
+%h1 Listing users
+.CSSTableGenerator
+  %table
+    %tr
+      %td Username
+      %td Password
+      %td Fullname
+      %td Manager
+      %td
+      %td
+      %td
+      
+    - @users.each do |user|
+      %tr
+        %td= user.userName
+        %td= user.password
+        %td= user.fullName
+        %td= user.manager
+        %td= link_to 'Show', user
+        %td= link_to 'Edit', edit_user_path(user)
+        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User', new_user_path

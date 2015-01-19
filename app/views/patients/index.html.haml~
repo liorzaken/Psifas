@@ -1,0 +1,30 @@
+%h1 Listing patients
+
+.CSSTableGenerator
+  %table
+    %tr
+      %td
+        Patientid
+      %td
+        Birthdate
+      %td 
+        Fullname
+      %td  
+        Address
+      %td
+      %td
+      %td
+    - @patients.each do |patient|
+      %tr
+        %td= patient.patientId
+        %td= patient.birthDate
+        %td= patient.fullName
+        %td= patient.address
+        %td= link_to 'Show', patient
+        %td= link_to 'Edit', edit_patient_path(patient)
+        %td= link_to 'Destroy', patient, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+%button.save{ :onclick => "window.location.href='/patient/new'"} New Patient
+

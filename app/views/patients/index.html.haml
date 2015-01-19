@@ -1,17 +1,19 @@
 %h1 Listing patients
 
-%table
-  %thead
+.CSSTableGenerator
+  %table
     %tr
-      %th Patientid
-      %th Birthdate
-      %th Fullname
-      %th Address
-      %th
-      %th
-      %th
-      
-  %tbody
+      %td
+        Patientid
+      %td
+        Birthdate
+      %td 
+        Fullname
+      %td  
+        Address
+      %td
+      %td
+      %td
     - @patients.each do |patient|
       %tr
         %td= patient.patientId
@@ -24,4 +26,5 @@
 
 %br
 
-= link_to 'New Patient', new_patient_path
+%button.save{ :onclick => "window.location.href='/patients/new'"} New Patient
+

@@ -1,3 +1,5 @@
+
+
 = form_for @patient do |f|
   - if @patient.errors.any?
     #error_explanation
@@ -7,11 +9,11 @@
           %li= msg
 
   .field
-    = f.label :patientId
+    = f.label :patientId, :id => "test"
     = f.text_field :patientId
   .field
     = f.label :birthDate
-    = f.date_select :birthDate, :order => [:day, :month, :year], :start_year => 1970, end_year => Time.now - 18.year
+    = f.date_select :birthDate, :order => [:day, :month, :year], :start_year => 1910
   .field
     = f.label :fullName
     = f.text_field :fullName
@@ -19,4 +21,4 @@
     = f.label :address
     = f.text_field :address
   .actions
-    = f.submit 'Save', :id => 'save'
+    = f.submit 'Save', :class => "sample btn custom large a"

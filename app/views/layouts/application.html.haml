@@ -20,7 +20,7 @@
                   /[if lt IE 9]
                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  %body
+  %body{:background => " /assets/Grey-Abstract-Background-46.jpg", :style => "background-repeat: no-repeat; background-size:100%"}
     #wrapper
       / Sidebar
       #sidebar-wrapper
@@ -47,7 +47,9 @@
           .row
             .col-lg-12
               .row
-                %a#menu-toggle.btn.btn-default{:href => "#menu-toggle"} Toggle Menu
+                / %a#menu-toggle.btn.btn-default{:href => "#menu-toggle"} Toggle Menu
+                %a#menu-toggle{:style => "height:45px",  :href => "#menu-toggle"}
+                  %img{:alt => "", :height => "50",:style => "margin-top: 30px", :src => "/assets/images.jpeg", :width => "60"}/ 
               .row
                 = yield
       / /#page-content-wrapper

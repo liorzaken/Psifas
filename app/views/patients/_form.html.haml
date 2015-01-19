@@ -1,4 +1,4 @@
-%link{:type => "text/css", :rel => "stylesheet", :href => "/css/edit.css"}
+
 
 = form_for @patient do |f|
   - if @patient.errors.any?
@@ -21,4 +21,4 @@
     = f.label :address
     = f.text_field :address
   .actions
-    = f.submit 'Save', :id => 'save'
+    = f.submit 'Save', :class => "save"
