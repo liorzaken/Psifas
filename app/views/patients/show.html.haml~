@@ -1,0 +1,16 @@
+%p#notice= notice
+%div
+  %p
+    %b.showDetails Patientid:  #{@patient.patientId}
+  %p
+    %b.showDetails Birthdate: #{@patient.birthDate}
+  %p
+    %b.showDetails Fullname:  #{@patient.fullName}	
+  %p
+    %b.showDetails Address: #{@patient.address}
+
+
+%button.save{ :onclick => "window.location.href='/patients/#{@patient.id}/edit'"} Edit
+
+
+

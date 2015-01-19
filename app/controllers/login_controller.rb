@@ -6,5 +6,6 @@ class LoginController < ApplicationController
   def login
     redirect_to main_page_index_path
   end
+  
  
 end

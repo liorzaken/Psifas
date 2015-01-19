@@ -1,18 +1,20 @@
 %p#notice= notice
 
 %p
-  %b Username:
+  %b.showDetails Username:
   = @user.userName
 %p
-  %b Password:
+  %b.showDetails Password:
   = @user.password
 %p
-  %b Fullname:
+  %b.showDetails Fullname:
   = @user.fullName
 %p
-  %b Manager:
+  %b.showDetails Manager:
   = @user.manager
 
-= link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+
+%button.save{ :onclick => "window.location.href='/users/#{@user.id}/edit'"} Edit
+
+%button.save{ :onclick => "window.location.href='/users'"} Back
+

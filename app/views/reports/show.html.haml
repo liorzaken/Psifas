@@ -22,6 +22,6 @@
   %b NextDate:
   = @report.nextDate
 
-= link_to 'Edit', edit_report_path(@report)
-\|
-= link_to 'Back', reports_path
+%button.save{ :onclick => "window.location.href='/reports/#{@report.id}/edit'"} Edit
+
+%button.save{ :onclick => "window.location.href='/reports'"} Back

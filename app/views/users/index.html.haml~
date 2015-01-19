@@ -22,4 +22,5 @@
 
 %br
 
-= link_to 'New User', new_user_path
+= link_to '', new_user_path
+%button.save{ :onclick => "window.location.href='/users/new'"} New User

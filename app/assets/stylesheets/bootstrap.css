@@ -14,6 +14,24 @@ body {
   margin: 0;
 }
 
+.left_arrow {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+.right_arrow{
+
+}
+
+.showDetails
+{
+
+  font-size: 140% 
+}
 
 
 .CSSTableGenerator {

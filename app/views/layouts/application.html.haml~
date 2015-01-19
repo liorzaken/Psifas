@@ -14,17 +14,20 @@
               / Bootstrap Core CSS
               %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
                 / Custom CSS
+                
                 %link{:href => "css/simple-sidebar.css", :rel => "stylesheet"}
+                %script{:src => "//code.jquery.com/jquery-1.10.2.js"}
                   / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
                   / WARNING: Respond.js doesn't work if you view the page via file://
                   /[if lt IE 9]
+                  
                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body{:background => " /assets/Grey-Abstract-Background-46.jpg", :style => "background-repeat: no-repeat; background-size:100%"}
     #wrapper
       / Sidebar
       #sidebar-wrapper
-        %ul.sidebar-nav
+        %ul.sidebar-nav{:style => "font-size: 140%"}
           %li.sidebar-brand
             Welcome 
           %li
@@ -47,9 +50,9 @@
           .row
             .col-lg-12
               .row
-                / %a#menu-toggle.btn.btn-default{:href => "#menu-toggle"} Toggle Menu
-                %a#menu-toggle{:style => "height:30px",  :href => "#menu-toggle"}
-                  %img{:alt => "", :height => "35px" , :width => "80px" ,:style => "margin-top: 30px", :src => "/assets/images.jpeg", :width => "60"}/ 
+                / %a#menu-toggle.btn.btn-default{ :href => "#menu-toggle"} Toggle Menu
+                %a#menu-toggle{:style => "height:45px",  :href => "#menu-toggle"}
+                  %img{:id => "arrow" ,:alt => "", :height => "50",:style => "margin-top: 30px", :src => "/assets/images.jpeg", :width => "60"}/ 
               .row
                 = yield
       / /#page-content-wrapper
@@ -62,5 +65,10 @@
     :javascript
       $("#menu-toggle").click(function(e) {
           e.preventDefault();
-          $("#wrapper").toggleClass("toggled");
-      });
+          $("#wrapper").toggleClass("toggled"); 
+          
+          $( "#arrow" ).toggleClass( "left_arrow", "addOrRemove" );
+          if ( addOrRemove ) {
+            $( "#arrow" ).addClass( "left_arrow" );
+          }
+          else {  $( "#arrow" ).removeClass( left_arrow );}});
