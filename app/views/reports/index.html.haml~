@@ -1,12 +1,12 @@
 %h1 Listing reports
 .CSSTableGenerator
+  %h3 Submitted
   %table 
  
     %tr
       %td Date
       %td Patientid
       %td Reporter
-      %td NextDate
       %td
       %td
       %td
@@ -17,11 +17,27 @@
         %td= report.date
         %td= report.patientId
         %td= report.reporter
-        %td= report.nextDate
         %td= link_to 'Show', report
         %td= link_to 'Edit', edit_report_path(report)
         %td= link_to 'Destroy', report, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
+  
+  %br
+ 
+  
+  %h3 Not Submitted
+  %table 
+ 
+    %tr
+      %td Patientid
+      %td NextDate
+     
+      
+ 
+    - @reports.each do |report|
+      %tr
+        %td= report.patientId
+        %td= report.nextDate
+    	   
 %br
+%button.save{ :onclick => "window.location.href='/reports/new'"} New Report
 
-= link_to 'New Report', new_report_path

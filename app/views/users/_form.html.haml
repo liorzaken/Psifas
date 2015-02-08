@@ -11,12 +11,9 @@
     = f.text_field :userName
   .field
     = f.label :password
-    = f.text_field :password
+    = f.text_field :password, :type => "password"
   .field
     = f.label :fullName
     = f.text_field :fullName
-  .field
-    = f.label :manager
-    = f.check_box :manager
   .actions
     = f.submit 'Save', :class => 'save'

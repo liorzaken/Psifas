@@ -28,6 +28,8 @@ class ReportsController < ApplicationController
   # POST /reports
   # POST /reports.json
   def create
+    @patients = Patient.all
+    @users = User.all
     @report = Report.new(report_params)
 
     respond_to do |format|
@@ -44,6 +46,8 @@ class ReportsController < ApplicationController
   # PATCH/PUT /reports/1
   # PATCH/PUT /reports/1.json
   def update
+    @patients = Patient.all
+    @users = User.all
     respond_to do |format|
       if @report.update(report_params)
         format.html { redirect_to @report, notice: 'Report was successfully updated.' }
@@ -75,4 +79,6 @@ class ReportsController < ApplicationController
     def report_params
       params.require(:report).permit(:date, :patientId, :reporter, :background, :description, :conclusion, :nextDate)
     end
+    
+   
 end

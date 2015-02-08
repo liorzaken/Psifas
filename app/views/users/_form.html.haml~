@@ -15,8 +15,5 @@
   .field
     = f.label :fullName
     = f.text_field :fullName
-  .field
-    = f.label :manager
-    = f.check_box :manager
   .actions
-    = f.submit 'Save', :id => 'save'
+    = f.submit 'Save', :class => 'save'

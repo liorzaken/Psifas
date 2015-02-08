@@ -1,11 +1,10 @@
-%h1 Listing users
+%h1 All Reporters
 .CSSTableGenerator
   %table
     %tr
       %td Username
       %td Password
       %td Fullname
-      %td Manager
       %td
       %td
       %td
@@ -15,11 +14,10 @@
         %td= user.userName
         %td= user.password
         %td= user.fullName
-        %td= user.manager
         %td= link_to 'Show', user
         %td= link_to 'Edit', edit_user_path(user)
         %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-%button.save{ :onclick => "window.location.href='/users/new'"} New User
+%button.save{ :onclick => "window.location.href='/users/new'"} New Reporter

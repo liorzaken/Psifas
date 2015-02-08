@@ -12,5 +12,5 @@
 
 %button.save{ :onclick => "window.location.href='/patients/#{@patient.id}/edit'"} Edit
 
-
+%button.save{ :onclick => "window.location.href='/patients'"} Back
 

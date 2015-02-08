@@ -39,4 +39,4 @@
     = f.label :'next report should be on:'
     = f.date_select :nextDate, :order => [:day, :month, :year], :selected => Time.now + 6.month
   .actions
-    = f.submit 'Save', :id => 'save'
+    = f.submit 'Save', :class => "save"

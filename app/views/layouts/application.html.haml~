@@ -24,26 +24,37 @@
                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body{:background => " /assets/Grey-Abstract-Background-46.jpg", :style => "background-repeat: no-repeat; background-size:100%"}
+  
+    %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => "float: right", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "1038"}/
+    
     #wrapper
       / Sidebar
-      #sidebar-wrapper
+      #sidebar-wrapper{:dir => "rtl"}
         %ul.sidebar-nav{:style => "font-size: 140%"}
           %li.sidebar-brand
-            Welcome 
+            %b
+            ברוך הבא                
           %li
-            = link_to 'Add Patient', new_patient_path
+            %b
+              = link_to 'הוספת מטופל', new_patient_path
           %li
-            = link_to 'Show All Patients', controller: 'patients'
+            %b
+              = link_to 'רשימת מטופלים', controller: 'patients'
           %li
-            = link_to 'Add Report', new_report_path
+            %b
+              = link_to 'הוספת דו"ח', new_report_path
           %li
-            %a{:href => "#"} Future reports
+            %b
+              = link_to 'רשימת דו"חות', reports_path 
           %li
-            = link_to 'Reports History', reports_path 
+            %b
+              = link_to 'ניהול', controller: 'users'
           %li
-            = link_to 'Managment', controller: 'users'
+            %b
+              = link_to 'אודות העמותה', controller: 'main_page' 
           
       / /#sidebar-wrapper
+      
       / Page Content
       #page-content-wrapper
         .container-fluid
@@ -55,6 +66,7 @@
                   %img{:id => "arrow" ,:alt => "", :height => "50",:style => "margin-top: 30px", :src => "/assets/images.jpeg", :width => "60"}/ 
               .row
                 = yield
+               
       / /#page-content-wrapper
     / /#wrapper
     / jQuery
@@ -71,4 +83,8 @@
           if ( addOrRemove ) {
             $( "#arrow" ).addClass( "left_arrow" );
           }
-          else {  $( "#arrow" ).removeClass( left_arrow );}});
+          else {  $( "#arrow" ).removeClass( left_arrow );
+                  $( "#logo" ).css({'width' : '1225px'});
+          }
+      });
+          

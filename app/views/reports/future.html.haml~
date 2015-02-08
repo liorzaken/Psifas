@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @report.date
+%p
+  %b Patientid:
+  = @report.patientId
+%p
+  %b Reporter:
+  = @report.reporter
+%p
+  %b Background:
+  = @report.background
+%p
+  %b Description:
+  = @report.description
+%p
+  %b Conclusion:
+  = @report.conclusion
+%p
+  %b NextDate:
+  = @report.nextDate
+
+%button.save{ :onclick => "window.location.href='/reports/#{@report.id}/edit'"} Edit
+
+%button.save{ :onclick => "window.location.href='/reports'"} Back

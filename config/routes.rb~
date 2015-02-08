@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
 
+  resources :reports
+
+  root 'reports#future'
+  
   resources :patients
 
   resources :users
@@ -10,7 +14,11 @@ Rails.application.routes.draw do
   root 'login#index'
   
   #add route to call "login" method from view
-  resources :login
+  resources :login do
+    collection do
+      post 'login'
+    end
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
