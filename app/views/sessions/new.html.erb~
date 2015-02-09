@@ -1,13 +1,29 @@
-<h1>Log in</h1>
+<div aria-hidden="true" class="modal show" id="loginModal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="text-center">Welcome To PSIFAS</h1>
+      </div>
+      <div class="modal-body">
+        <div class="form col-md-12 center-block">
+          <%= form_tag sessions_path do %>
+            <div class="field">
+              <%= label_tag :userName %>
+              <%= text_field_tag :userName, params[:userName] %>
+            </div>
+            <div class="field">
+              <%= label_tag :password %>
+              <%= password_field_tag :password %>
+            </div>
+            <div class="actions"><%= submit_tag "Log in" %></div>
+          <% end %>
+        </div>
+        <% if flash[:notice] %>
+      </div>
+      <div class="modal-footer">
+        <div class="col-md-12"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= form_tag main_page_index_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :userName, params[:userName] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
-<% end %>

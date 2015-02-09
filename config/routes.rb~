@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resources :sessions
 
   get 'main_page/index'
-
+  
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  
+  
   root 'sessions#new'
   
   #add route to call "login" method from view

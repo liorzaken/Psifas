@@ -13,14 +13,11 @@ Rails.application.routes.draw do
   
   get "log_out" => "sessions#destroy", :as => "log_out"
   
+  
   root 'sessions#new'
   
   #add route to call "login" method from view
-  resources :login do
-    collection do
-      post 'login'
-    end
-  end
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -5,15 +5,14 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}
       %meta{:charset => "utf-8"}
-        %title Bootstrap Login Form
+        %title Welcome To Psifas - Please Log In
         %meta{:content => "Bootply", :name => "generator"}/
         %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
           %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
-            /[if lt IE 9]
-              <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
             %link{:href => "css/styles.css", :rel => "stylesheet"}
   %body
+  
     = yield
-    / script references
+    
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"}
     %script{:src => "js/bootstrap.min.js"}

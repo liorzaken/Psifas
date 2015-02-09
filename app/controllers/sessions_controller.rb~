@@ -1,9 +1,18 @@
 class SessionsController < ApplicationController
   layout "login"
-  
-  before_filter :authorize, only: [:destroy]
-  
   def new
+  end
+  
+  def isAdmin
+    if session[:admin] = true
+      true
+    end
+    false
+  end
+  def currentUser
+    toReturn = ""
+    toReturn += session[:user_name]
+    return toReturn
   end
   
 
@@ -21,6 +30,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_name] = nil
-    redirect_to main_page_index_path
+    redirect_to new_session_path
   end
 end

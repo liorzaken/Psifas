@@ -33,7 +33,8 @@
         %ul.sidebar-nav{:style => "font-size: 140%"}
           %li.sidebar-brand{:style => "font-size: 160%"}
             %b
-            ברוך הבא                
+            ברוך הבא
+                            
           %li
             %b
               = link_to 'הוספת מטופל', new_patient_path
@@ -46,12 +47,16 @@
           %li
             %b
               = link_to 'רשימת דו"חות', reports_path 
-          %li
-            %b
-              = link_to 'ניהול', controller: 'users'
+          - if @admin  
+            %li
+              %b
+                = link_to 'ניהול', users_path
           %li
             %b
               = link_to 'אודות העמותה', controller: 'main_page' 
+          %li
+            %b
+              = link_to 'התנתק', log_out_path 
          
           
       / /#sidebar-wrapper
@@ -67,7 +72,7 @@
                   %img{:id => "arrow" ,:alt => "", :height => "50",:style => "margin-top: 30px", :src => "/assets/images.jpeg", :width => "60"}/ 
               .row
                 = yield
-               
+                
       / /#page-content-wrapper
     / /#wrapper
     / jQuery
