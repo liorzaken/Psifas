@@ -4,19 +4,14 @@
   %b.showDetails Username:
   = @user.userName
 %p
-  %b.showDetails Password:
-  = @user.password
-%p
   %b.showDetails Fullname:
   = @user.fullName
 %p
-  %b.showDetails Manager:
-  = @user.manager
+  %b.showDetails Admin:
+  = @user.admin
 
 
 %button.save{ :onclick => "window.location.href='/users/#{@user.id}/edit'"} Edit
 
 %button.save{ :onclick => "window.location.href='/users'"} Back
-= link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+

@@ -1,0 +1,4 @@
+class FixDb111 < ActiveRecord::Migration
+  def change
+  end
+end

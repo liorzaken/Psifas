@@ -3,7 +3,6 @@
   %table
     %tr
       %td Username
-      %td Password
       %td Fullname
       %td
       %td
@@ -12,7 +11,6 @@
     - @users.each do |user|
       %tr
         %td= user.userName
-        %td= user.password
         %td= user.fullName
         %td= link_to 'Show', user
         %td= link_to 'Edit', edit_user_path(user)

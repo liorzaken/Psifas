@@ -1,5 +1,0 @@
-%h1 Editing user
-
-= render 'form'
-
-%button.save{ :onclick => "window.location.href='/users'"} Back

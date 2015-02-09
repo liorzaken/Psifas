@@ -1,5 +1,0 @@
-%h1 New user
-%a.some{ :style => "position: absolute; left: 300px; top: 300px;" }
-= render 'form'
-
-%button.save{ :onclick => "window.location.href='/users'"} Back

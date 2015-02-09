@@ -1,0 +1,5 @@
+class AddAdmin < ActiveRecord::Migration
+  def up
+    User.create(fullName: 'admin', userName: 'admin', password_digest: '123456', admin: 'true')
+  end
+end

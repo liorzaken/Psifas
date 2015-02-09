@@ -3,15 +3,15 @@ Rails.application.routes.draw do
 
   resources :reports
 
-  root 'reports#future'
-  
   resources :patients
 
   resources :users
+  
+  resources :sessions
 
   get 'main_page/index'
 
-  root 'login#index'
+  root 'sessions#new'
   
   #add route to call "login" method from view
   resources :login do

@@ -31,7 +31,7 @@
       / Sidebar
       #sidebar-wrapper{:dir => "rtl"}
         %ul.sidebar-nav{:style => "font-size: 140%"}
-          %li.sidebar-brand
+          %li.sidebar-brand{:style => "font-size: 160%"}
             %b
             ברוך הבא                
           %li
@@ -52,6 +52,9 @@
           %li
             %b
               = link_to 'אודות העמותה', controller: 'main_page' 
+          %li
+            %b
+              = link_to 'get the fuck out', controller: 'sessions', action: 'log_out' 
           
       / /#sidebar-wrapper
       

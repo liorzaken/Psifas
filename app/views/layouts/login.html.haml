@@ -13,23 +13,7 @@
               <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
             %link{:href => "css/styles.css", :rel => "stylesheet"}
   %body
-    / login modal
-    #loginModal.modal.show{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-dialog
-        .modal-content
-          .modal-header
-            %h1.text-center Welcome To PSIFAS
-          .modal-body
-            .form.col-md-12.center-block
-              = form_tag :controller => 'login', :action => 'login' do
-                .form-group
-                  %input.form-control.input-lg{:placeholder => "UserName", :type => "text"}
-                .form-group
-                  %input.form-control.input-lg{:placeholder => "Password", :type => "password"}
-                .form-group
-                  = button_tag "login" , class: 'btn btn-primary btn-lg btn-block'
-          .modal-footer
-            .col-md-12
+    = yield
     / script references
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"}
     %script{:src => "js/bootstrap.min.js"}
