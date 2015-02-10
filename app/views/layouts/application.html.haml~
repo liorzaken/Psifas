@@ -33,7 +33,11 @@
         %ul.sidebar-nav{:style => "font-size: 140%"}
           %li.sidebar-brand{:style => "font-size: 160%"}
             %b
-            ברוך הבא
+              ברוך הבא 
+              = @current_user 
+              
+           
+            
                             
           %li
             %b
@@ -72,11 +76,6 @@
                   %img{:id => "arrow" ,:alt => "", :height => "50",:style => "margin-top: 30px", :src => "/assets/images.jpeg", :width => "60"}/ 
               .row
                 = yield
-                %br
-                %b
-                  = @current_user
-                  %br
-                  = @admin
       / /#page-content-wrapper
     / /#wrapper
     / jQuery
