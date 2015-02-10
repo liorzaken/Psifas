@@ -24,7 +24,7 @@
   %br
  
   
-  %h3 Not Submitted
+  %h3 Need Submitted
   %table 
  
     %tr
@@ -33,7 +33,8 @@
      
       
  
-    - @reports.each do |report|
+    - @closeReports.each do |report|
+    
       %tr
         %td= report.patientId
         %td= report.nextDate

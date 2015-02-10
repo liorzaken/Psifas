@@ -1,10 +1,13 @@
 class ReportsController < ApplicationController
-  before_action :set_report, only: [:show, :edit, :update, :destroy, :future]
+  before_action :set_report, only: [:show, :edit, :update, :destroy]
 
   # GET /reports
   # GET /reports.json
   def index
     @reports = Report.all
+    @closeReports=Report.all
+    @closeReports.select {|report| report.nextDate < Time.now + 3.weeks} 
+    @closeReports=@closeReports.sort_by { |x| x.nextDate }
   end
 
   # GET /reports/1

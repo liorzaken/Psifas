@@ -1,4 +1,4 @@
-%h1 Listing reports
+%h1 All Reports
 .CSSTableGenerator
   %h3 Submitted
   %table 
@@ -33,7 +33,8 @@
      
       
  
-    - @reports.each do |report|
+    - @closeReports.each do |report|
+    
       %tr
         %td= report.patientId
         %td= report.nextDate

@@ -5,6 +5,9 @@ class ReportsController < ApplicationController
   # GET /reports.json
   def index
     @reports = Report.all
+    @closeReports=Report.all
+    @closeReports.select {|report| report.nextDate < Time.now + 3.weeks} 
+    @closeReports=@closeReports.sort_by { |x| x.nextDate }
   end
 
   # GET /reports/1

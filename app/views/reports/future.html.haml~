@@ -1,27 +1,27 @@
-%p#notice= notice
+%h1 Listing reports
+.CSSTableGenerator
+  %table 
+ 
+    %tr
+      %td Date
+      %td Patientid
+      %td Reporter
+      %td NextDate
+      %td
+      %td
+      %td
+      
+ 
+    - @reports.each do |report|
+      %tr
+        %td= report.date
+        %td= report.patientId
+        %td= report.reporter
+        %td= report.nextDate
+        %td= link_to 'Show', report
+        %td= link_to 'Edit', edit_report_path(report)
+        %td= link_to 'Destroy', report, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%p
-  %b Date:
-  = @report.date
-%p
-  %b Patientid:
-  = @report.patientId
-%p
-  %b Reporter:
-  = @report.reporter
-%p
-  %b Background:
-  = @report.background
-%p
-  %b Description:
-  = @report.description
-%p
-  %b Conclusion:
-  = @report.conclusion
-%p
-  %b NextDate:
-  = @report.nextDate
+%br
+%button.save{ :onclick => "window.location.href='/reports/new'"} New Report
 
-%button.save{ :onclick => "window.location.href='/reports/#{@report.id}/edit'"} Edit
-
-%button.save{ :onclick => "window.location.href='/reports'"} Back
