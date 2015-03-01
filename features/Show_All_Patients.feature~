@@ -1,0 +1,37 @@
+Feature: show all patients
+
+As a worker at psifas
+So I can view all of the patients
+I want to to be able to see a list of all my patients 
+
+Background: user allready loged in.
+
+
+Given I am on the main page
+And Given the following patients exist:
+
+| patientId | birthdate  | fullName        | address    |
+| 010101010 | 2015-02-08 | Carlos Kelevtov | Bratislava |
+| 111222333 | 2015-01-18 | moti monsonego  | Finland    |
+Scenario: view list of all the patients
+
+When I go to the show all patients page
+
+
+Then I should see "All Patients"
+
+    And I should see "Patientid"	
+    And I should see "Birthdate"
+    And I should see "Fullname"
+    And I should see "Address"
+    
+    
+    And I should see "010101010"
+    And I should see "2015-02-08"
+    And I should see "Carlos Kelevtov"
+    And I should see "Bratislava"
+
+    And I should see "111222333"
+    And I should see "moti monsonego"
+    And I should see "2015-01-18"
+    And I should see "Finland"

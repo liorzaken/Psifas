@@ -12,10 +12,7 @@
             %meta{:content => "", :name => "author"}
               %title Simple Sidebar - Start Bootstrap Template
               / Bootstrap Core CSS
-              %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
-                / Custom CSS
-                
-                %link{:href => "css/simple-sidebar.css", :rel => "stylesheet"}
+              %link{:href => "css/simple-sidebar.css", :rel => "stylesheet"}
                 %script{:src => "//code.jquery.com/jquery-1.10.2.js"}
                   / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
                   / WARNING: Respond.js doesn't work if you view the page via file://
@@ -25,20 +22,21 @@
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body{:background => " /assets/Grey-Abstract-Background-46.jpg", :style => "background-repeat: no-repeat; background-size:100%"}
   
-    %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => "float: right", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "1038"}/
+    %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => "float: right", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "538"}
     
     #wrapper
       / Sidebar
       #sidebar-wrapper{:dir => "rtl"}
         %ul.sidebar-nav{:style => "font-size: 140%"}
-          %li.sidebar-brand{:style => "font-size: 160%"}
+          %li.sidebar-brand{:style => "font-size: 100%; color: #FFFFFF"}
             %b
               ברוך הבא 
               = @current_user 
               
            
-            
-                            
+         
+          %br
+          %br                  
           %li
             %b
               = link_to 'הוספת מטופל', new_patient_path
@@ -96,4 +94,9 @@
                   $( "#logo" ).css({'width' : '1225px'});
           }
       });
+      
+      
+  
+  
+   
           

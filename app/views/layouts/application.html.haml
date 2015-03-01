@@ -25,21 +25,19 @@
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body{:background => " /assets/Grey-Abstract-Background-46.jpg", :style => "background-repeat: no-repeat; background-size:100%"}
   
-    %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => "float: right", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "1038"}/
+    %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => "float: right", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "438"}
     
     #wrapper
       / Sidebar
       #sidebar-wrapper{:dir => "rtl"}
         %ul.sidebar-nav{:style => "font-size: 140%"}
-          %li.sidebar-brand{:style => "font-size: 160%"}
+          %li.sidebar-brand{:style => "font-size: 100%; color: #FFFFFF"}
             %b
               ברוך הבא 
               = @current_user 
               
            
-            
-          %br
-          %br
+         
           %br
           %br                  
           %li
@@ -99,4 +97,9 @@
                   $( "#logo" ).css({'width' : '1225px'});
           }
       });
+      
+      
+  
+  
+   
           

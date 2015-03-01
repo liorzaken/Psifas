@@ -8,9 +8,10 @@
         %title Welcome To Psifas - Please Log In
         %meta{:content => "Bootply", :name => "generator"}/
         %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
-          %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
-            %link{:href => "css/styles.css", :rel => "stylesheet"}
-  %body
+         
+          %link{:href => "css/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %body{:background => " /assets/Grey-Abstract-Background-46.jpg", :style => "background-repeat: no-repeat; background-size:100%"}
+    %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => "float: right;", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "100%" }
   
     = yield
     

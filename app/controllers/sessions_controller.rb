@@ -2,6 +2,8 @@ class SessionsController < ApplicationController
   layout "login"
   skip_before_filter :session_read
   def new
+    flash.now.alert = "Invalid email or password"
+    
   end
   
   def create
@@ -11,8 +13,8 @@ class SessionsController < ApplicationController
       session[:admin] = user.admin
       redirect_to main_page_index_path
     else
-      flash.now.alert = "Invalid email or password"
-      render "new"
+      
+      render 'error'
     end
     
   end
