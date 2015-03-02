@@ -1,3 +1,6 @@
+- var str = "Hello world!";
+- var res = str.substring(1, 4);
+          
 %div{ :dir => "rtl"}
   %h1 כל המטופלים
 
@@ -26,6 +29,6 @@
         %td= link_to 'מחיקה', patient, :method => :delete, :data => { :confirm => 'האם אתה בטוח?' }
 
 %br
-
+%div{ :dir => "rtl"}
   %button.save{ :onclick => "window.location.href='/patients/new'"} מטופל חדש
 

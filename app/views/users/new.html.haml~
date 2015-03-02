@@ -1,5 +1,5 @@
 %div{:dir => "rtl",  :style => "margin-right:300px"}
-  %h1 New Reporter
+  %h1 מטפל חדש2
   %a.some{ :style => "position: absolute; left: 300px; top: 300px;" }
   = render 'form'
 

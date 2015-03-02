@@ -12,8 +12,8 @@
     = f.label :'תעודת זהות', :id => "test"
     = f.text_field :patientId
   .field
-    = f.label :'תאריך לידה'
-    = f.date_select :birthDate, :order => [:day, :month, :year], :start_year => 1910
+    = f.label  :'תאריך לידה'
+    = f.date_select[0..8] :birthDate, :order => [:day, :month, :year], :start_year => 1910
   .field
     = f.label :'שם מלא'
     = f.text_field :fullName
@@ -21,4 +21,4 @@
     = f.label :'כתובת'
     = f.text_field :address
   .actions
-    = f.submit 'Save', :class => "save"
+    = f.submit 'שמור', :class => "save"

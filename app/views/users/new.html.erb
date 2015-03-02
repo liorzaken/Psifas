@@ -1,32 +1,34 @@
-<h1>Sign Up</h1>
 
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div dir="rtl" style="margin-right:300px">
+  <h1>מטפל חדש</h1>
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :'שם מלא' %>
+      <%= f.text_field :fullName %>
     </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :fullName %>
-    <%= f.text_field :fullName %>
-  </div>
-  <div class="field">
-    <%= f.label :userName %>
-    <%= f.text_field :userName %>
-  </div>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
+    <div class="field">
+      <%= f.label :'שם משתמש' %>
+      <%= f.text_field :userName %>
+    </div>
+    <div class="field">
+      <%= f.label :'סיסמא' %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :'אימות סיסמא' %>
+      <%= f.password_field :password_confirmation %>
+    </div>
   
-  <div class="actions"><%= f.submit %></div>
-<% end %>
+    <div class="actions"><%= f.submit 'שמור', :class => "save"  %></div>
+</div>
+  <% end %>
