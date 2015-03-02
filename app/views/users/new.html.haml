@@ -1,5 +1,6 @@
-%h1 New Reporter
-%a.some{ :style => "position: absolute; left: 300px; top: 300px;" }
-= render 'form'
+%div{:dir => "rtl",  :style => "margin-right:300px"}
+  %h1 מטפל חדש
+  %a.some{ :style => "position: absolute; left: 300px; top: 300px;" }
+  = render 'form'
 
-%button.save{ :onclick => "window.location.href='/users'"} Back
+  %button.save{ :onclick => "window.location.href='/users'"} חזור

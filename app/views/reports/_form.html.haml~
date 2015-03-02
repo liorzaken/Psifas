@@ -7,14 +7,14 @@
           %li= msg
 
   .field
-    = f.label :date
+    = f.label :'תאריך'
     = f.date_select :date, :order => [:day, :month, :year]
   
   - patientsHash = Hash.new
   - @patients.each do |p|
     - patientsHash[p.fullName+' '+p.patientId]=p.patientId
   .field
-    = f.label :patientId
+    = f.label :'תעודת זהות מטופל'
     = f.select(:patientId, options_for_select(patientsHash))
   
   
@@ -22,21 +22,23 @@
   - @users.each do |u|
     - usersHash[u.fullName]=u.userName
   .field
-    = f.label :reporter
+    = f.label :'מדווח'
     = f.select(:reporter, options_for_select(usersHash))
   
   .field
-    = f.label :background
+    = f.label :'רקע'
     = f.text_area :background
   .field
-    = f.label :description
+    = f.label :'תיאור'
     = f.text_area :description
   .field
-    = f.label :conclusion
+    = f.label :'מסקנות'
     = f.text_area :conclusion
     
   .field
-    = f.label :'next report should be on:'
+    = f.label :':דו"ח הבא בתאריך'
     = f.date_select :nextDate, :order => [:day, :month, :year], :selected => Time.now + 6.month
+    
+    
   .actions
-    = f.submit 'Save', :class => "save"
+    = f.submit 'שמור', :class => "save"

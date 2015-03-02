@@ -1,13 +1,14 @@
-%p#notice= notice
+%div{:dir => "rtl",  :style => "margin-right:300px"}
+  %p#notice= notice
 
-%p
-  %b.showDetails Username:
-  = @user.userName
-%p
-  %b.showDetails Fullname:
-  = @user.fullName
-
-%button.save{ :onclick => "window.location.href='/users/#{@user.id}/edit'"} Edit
-
-%button.save{ :onclick => "window.location.href='/users'"} Back
+  %p
+    %b.showDetails שם משתמש:
+    = @user.userName
+  %p{ :style => "margin-bottom:15px"}
+    %b.showDetails שם מלא:
+    = @user.fullName
+ 
+  %button.save{ :onclick => "window.location.href='/users/#{@user.id}/edit'"}   עריכת מטפל
+  
+  %button.save{ :onclick => "window.location.href='/users'"} חזור
 

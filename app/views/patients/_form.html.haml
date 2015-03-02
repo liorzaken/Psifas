@@ -9,16 +9,16 @@
           %li= msg
 
   .field
-    = f.label :patientId, :id => "test"
+    = f.label :'תעודת זהות', :id => "test"
     = f.text_field :patientId
   .field
-    = f.label :birthDate
+    = f.label :'תאריך לידה'
     = f.date_select :birthDate, :order => [:day, :month, :year], :start_year => 1910
   .field
-    = f.label :fullName
+    = f.label :'שם מלא'
     = f.text_field :fullName
   .field
-    = f.label :address
+    = f.label :'כתובת'
     = f.text_field :address
   .actions
-    = f.submit 'Save', :class => "save"
+    = f.submit 'שמור', :class => "save"

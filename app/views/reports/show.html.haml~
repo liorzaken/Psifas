@@ -1,27 +1,28 @@
-%p#notice= notice
+%div{:dir => "rtl",  :style => "margin-right:300px"}
+  %p#notice= notice
 
-%p
-  %b Date:
-  = @report.date
-%p
-  %b Patientid:
-  = @report.patientId
-%p
-  %b Reporter:
-  = @report.reporter
-%p
-  %b Background:
-  = @report.background
-%p
-  %b Description:
-  = @report.description
-%p
-  %b Conclusion:
-  = @report.conclusion
-%p
-  %b NextDate:
-  = @report.nextDate
+  %p
+    %b תאריך:
+    = @report.date
+  %p
+    %b ת.ז מטופל:
+    = @report.patientId
+  %p
+    %b מדווח:
+    = @report.reporter
+  %p
+    %b רקע:
+    = @report.background
+  %p
+    %b תאור:
+    = @report.description
+  %p
+    %b מסקנה:
+    = @report.conclusion
+  %p
+    %b תאריך הבא:
+    = @report.nextDate
 
-= link_to 'Edit', edit_report_path(@report)
-\|
-= link_to 'Back', reports_path
+  %button.save{ :onclick => "window.location.href='/reports/#{@report.id}/edit'"} עריכה
+
+  %button.save{ :onclick => "window.location.href='/reports'"} חזור

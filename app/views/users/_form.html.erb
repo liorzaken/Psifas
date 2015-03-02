@@ -10,21 +10,21 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :fullName %>
+    <%= f.label :'שם מלא' %>
     <%= f.text_field :fullName %>
   </div>
   <div class="field">
-    <%= f.label :userName %>
+    <%= f.label :'שם משתמש' %>
     <%= f.text_field :userName %>
   </div>
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :'סיסמא' %>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
+    <%= f.label :'אימות סיסמא' %>
     <%= f.password_field :password_confirmation %>
   </div>
   
-  <div class="actions"><%= f.submit %></div>
+  <div class="actions" ><%= f.submit 'שמור', :class => "save" %></div>
 <% end %>

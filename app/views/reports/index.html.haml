@@ -1,12 +1,13 @@
-%h1 All Reports
+%div{ :dir => "rtl"}
+  %h1 כל הדו"חות
 .CSSTableGenerator
-  %h3 Submitted
+  %h3{ :dir => "rtl"} הוגש
   %table 
  
     %tr
-      %td Date
-      %td Patientid
-      %td Reporter
+      %td תאריך
+      %td תעודת זהות
+      %td מדווח
       %td
       %td
       %td
@@ -17,19 +18,19 @@
         %td= report.date
         %td= report.patientId
         %td= report.reporter
-        %td= link_to 'Show', report
-        %td= link_to 'Edit', edit_report_path(report)
-        %td= link_to 'Destroy', report, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'הצג', report
+        %td= link_to 'עריכה', edit_report_path(report)
+        %td= link_to 'מחיקה', report, :method => :delete, :data => { :confirm => 'האם אתה בטוח?' }
   
   %br
  
   
-  %h3 Need Submitted
+  %h3{ :dir => "rtl"} הגשות עתידיות
   %table 
  
     %tr
-      %td Patientid
-      %td NextDate
+      %td תעודת זהות
+      %td תאריך הבא
      
       
  
@@ -40,5 +41,6 @@
         %td= report.nextDate
     	   
 %br
-%button.save{ :onclick => "window.location.href='/reports/new'"} New Report
+%div{ :dir => "rtl"}
+  %button.save{ :onclick => "window.location.href='/reports/new'"} דו"ח חדש
 

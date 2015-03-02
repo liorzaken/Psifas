@@ -1,5 +1,6 @@
-%embed{:align => "middle",:style => "float: right", :allowscriptaccess => "sameDomain", :height => "184", :name => "/sites/reut/content/flash/reut banner.swf", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :quality => "high", :src => "http://www.amutatreut.co.il/sites/reut/content/flash/reut%20banner.swf", :type => "application/x-shockwave-flash", :width => "816", :wmode => "opaque"}/
-%h3 Welcome To Psifas
+%embed{ :align => "left",:style => "float: right", :allowscriptaccess => "sameDomain", :height => "184", :name => "/sites/reut/content/flash/reut banner.swf", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :quality => "high", :src => "http://www.amutatreut.co.il/sites/reut/content/flash/reut%20banner.swf", :type => "application/x-shockwave-flash", :width => "816", :wmode => "opaque"}/
+
+%h3{:dir => "rtl"} ברוך הבא לפסיפס
 %br
 %br
 %br
@@ -30,7 +31,7 @@
   הצוות כולל עובדים סוציאליים, פסיכולוגים, מרפאים בעיסוק, מדריכים טיפוליים ושיקומיים, אחיות, רופאים פסיכיאטריים, סטודנטים למקצועות הטיפול והשיקום ומתנדבים.
   
   העמותה מפעילה שירותי שיקום באזוריים שונים בארץ כגון: ירושלים, אזור תעשייה עמק חפר, ראשון לציון, מודיעין, יבנה, אבו-גוש, אשדוד, אשקלון, ישוב יד בנימין (רב-נכותי).
-  %div{:style => "text-align: center; gravity:bottom"}
+  %div{:style => "margin-top: 20px; text-align: center; gravity:bottom"}
     רח' פועלי צדק 3, &nbsp;ירושלים &nbsp;93420 | &nbsp;טלפון 02-6749911 &nbsp;| &nbsp;פקס 02-6730844&nbsp;&nbsp;|&nbsp;&nbsp;
     %a{:href => "mailto:rfireut@netvision.net.il"}> rfireut@netvision.net.il
     \&nbsp;&nbsp;

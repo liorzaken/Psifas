@@ -1,6 +1,6 @@
 
-<div class="modal-dialog" style="margin-top:60px;" >
-  <div id="login">
+<div class="modal-dialog" >
+  <div id="login" style= " margin-top : -120px">
     <%= form_tag sessions_path do %>
       <fieldset class="clearfix">
         <p>

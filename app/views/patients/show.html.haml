@@ -1,15 +1,15 @@
 %p#notice= notice
-%div
+%div{:dir => "rtl",  :style => "margin-right:300px"}
   %p
-    %b.showDetails Patientid:  #{@patient.patientId}
+    %b.showDetails תעודת זהות  #{@patient.patientId}
   %p
-    %b.showDetails Birthdate: #{@patient.birthDate}
+    %b.showDetails תאריך לידה #{@patient.birthDate}
   %p
-    %b.showDetails Fullname:  #{@patient.fullName}	
-  %p
-    %b.showDetails Address: #{@patient.address}
+    %b.showDetails שם מלא  #{@patient.fullName}	
+  %p{ :style => "margin-bottom:15px"}
+    %b.showDetails כתובת #{@patient.address}
 
-%button.save{ :onclick => "window.location.href='/patients/#{@patient.id}/edit'"} Edit
+  %button.save{ :onclick => "window.location.href='/patients/#{@patient.id}/edit'"} עריכה
 
-%button.save{ :onclick => "window.location.href='/patients'"} Back
+  %button.save{ :onclick => "window.location.href='/patients'"} חזור
 

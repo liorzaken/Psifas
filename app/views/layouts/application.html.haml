@@ -24,14 +24,14 @@
                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body{:background => " /assets/Grey-Abstract-Background-46.jpg", :style => "background-repeat: no-repeat; background-size:100%"}
-  
-    %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => "float: right", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "438"}
+    %div{:style => "background-color: #000033; width: 448px; height:73px;  float: right;"} 
+      %img{:id => "logo", :alt => "עמותת רעות", :height => "63",:style => " float: right", :src => "/assets/logo.jpg", :title => "עמותת רעות", :width => "438"}
     
     #wrapper
       / Sidebar
       #sidebar-wrapper{:dir => "rtl"}
         %ul.sidebar-nav{:style => "font-size: 140%"}
-          %li.sidebar-brand{:style => "font-size: 100%; color: #FFFFFF"}
+          %li.sidebar-brand{:style => "font-size: 100%; color: #FFFFFF; margin-top:-150px;"}
             %b
               ברוך הבא 
               = @current_user 

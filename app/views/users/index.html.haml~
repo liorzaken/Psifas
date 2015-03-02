@@ -1,22 +1,23 @@
-%h1 All Reporters
+%div{:dir => "rtl"}
+  %h1 כל המטפלים
 .CSSTableGenerator
   %table
     %tr
-      %td Username
-      %td Fullname
+      %td שם משתמש
+      %td שם מלא 
       %td
       %td
       %td
       
     - @users.each do |user|
-      %tr
-        %td= user.userName
-        %td= user.fullName
-        - if user.admin != true
-          %td= link_to 'Show', user
-          %td= link_to 'Edit', edit_user_path(user)
-          %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - if user.admin != true
+        %tr
+          %td= user.userName
+          %td= user.fullName
+          %td= link_to 'הצג', user
+          %td= link_to 'עריכה', edit_user_path(user)
+          %td= link_to 'מחיקה', user, :method => :delete, :data => { :confirm => 'האם אתה בטוח?' }
 
 %br
-
-%button.save{ :onclick => "window.location.href='/users/new'"} New Reporter
+%div{:dir => "rtl"}
+  %button.save{ :onclick => "window.location.href='/users/new'"} מטפל חדש

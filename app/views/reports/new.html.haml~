@@ -1,5 +1,7 @@
-%h1 New report
 
-= render 'form'
+%div{:dir => "rtl",  :style => "margin-right:300px"}
+  %h1 דו"ח חדש
+  = render 'form'
 
-= link_to 'Back', reports_path
+%button.save{ :onclick => "window.location.href='/reports'"} חזור
+

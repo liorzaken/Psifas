@@ -1,7 +1,7 @@
 %link{:type => "text/css", :rel => "stylesheet", :href => "/css/new_patient.css"}
-%h1 New patient
+%div{:dir => "rtl",  :style => "margin-right:300px"}
+  %h1 מטופל חדש
 
-= render 'form'
+  = render 'form'
 
-
-%button.save{ :onclick => "window.location.href='/patients'"} Back
+  %button.save{ :onclick => "window.location.href='/patients'"} חזור
